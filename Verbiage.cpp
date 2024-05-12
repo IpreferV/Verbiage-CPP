@@ -19,10 +19,13 @@ public:
     std::string bg_tx_reset = "\u001B[0m";
 
     void dash() {
-        for (int i = 0; i <= 104; ++i) {
-            std::cout << "-";
+        for (int i = 0; i <= 52; ++i) {
+            std::cout << "=";
+            if (i != 52) {
+                std::cout << "-";
+            }
         }
-        std::cout << '\n';
+        std::cout << std::endl;
     }
 } Vanity;
 Vanity ui;
@@ -224,37 +227,36 @@ public:
 Bug report;
 
 void welcome_screen() {
-    std::cout << ui.screen_clear;
-
     std::cout << "Welcome to " << ui.tx_cyan << "Verbiage" << ui.bg_tx_reset << "!" << std::endl;
 }
 void roach() {
     std::cout << ui.screen_clear;
 
-        std::cout << "                     ░░";
-        std::cout << "                       ░░                                    ░░";
-        std::cout << "                         ░░                                  ░░";
-        std::cout << "                           ░░                              ░░";
-        std::cout << "                             ░░                ░░        ▒▒";
-        std::cout << "                                               ░░      ▒▒";
-        std::cout << "                                       ░░      ▒▒░░░░░░▒▒        ▓▓▒▒";
-        std::cout << "                                         ░░▓▓▓▓░░██▓▓▓▓▓▓▓▓▒▒░░░░▒▒  ▒▒░░";
-        std::cout << "                                         ▓▓▓▓▓▓▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒▒    ░░▓▓░░";
-        std::cout << "                     ░░░░░░░░░░░░░░░░░    ████▒▒▓▓▓▓▓▓▓▓▓▓▒▒▓▓▓▓▓▓▓▓▒▒░░    ░░▓▓";
-        std::cout << "                                         ▒▒▓▓▓▓██▒▒▓▓▒▒▒▒▒▒▒▒▓▓▓▓▒▒▓▓▓▓▒▒      ░░";
-        std::cout << "                                           ░░▓▓▓▓▓▓██▓▓▓▓▒▒▒▒▓▓▒▒▒▒▓▓▓▓▒▒▒▒▒▒";
-        std::cout << "                                           ░░▒▒▒▒▓▓▓▓██▓▓▓▓▓▓▓▓▒▒▒▒▓▓▓▓▓▓▒▒▒▒▒▒";
-        std::cout << "                                           ▒▒  ░░▒▒▒▒▒▒▓▓██▓▓▓▓▓▓▒▒▓▓▓▓▓▓▓▓▒▒▒▒░░";
-        std::cout << "                                         ░░      ▒▒░░░░░░▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒▒▒▒░░";
-        std::cout << "                                         ░░      ░░▒▒    ░░▓▓▒▒▒▒▒▒▒▒▓▓▓▓▓▓▒▒▒▒░░";
-        std::cout << "                                                   ░░░░  ░░▓▓░░  ░░░░░░▒▒░░░░░░";
-        std::cout << "                                                     ░░    ▓▓▓▓▒▒░░";
-        std::cout << "                                                         ░░      ░░░░▒▒▓▓";
-        std::cout << "                                                                             ░░";
+        std::cout << "                     ░░" << std::endl;
+        std::cout << "                       ░░                                    ░░" << std::endl;
+        std::cout << "                         ░░                                  ░░" << std::endl;
+        std::cout << "                           ░░                              ░░" << std::endl;
+        std::cout << "                             ░░                ░░        ▒▒" << std::endl;
+        std::cout << "                                               ░░      ▒▒" << std::endl;
+        std::cout << "                                       ░░      ▒▒░░░░░░▒▒        ▓▓▒▒" << std::endl;
+        std::cout << "                                         ░░▓▓▓▓░░██▓▓▓▓▓▓▓▓▒▒░░░░▒▒  ▒▒░░" << std::endl;
+        std::cout << "                                         ▓▓▓▓▓▓▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒▒    ░░▓▓░░" << std::endl;
+        std::cout << "                     ░░░░░░░░░░░░░░░░░    ████▒▒▓▓▓▓▓▓▓▓▓▓▒▒▓▓▓▓▓▓▓▓▒▒░░    ░░▓▓" << std::endl;
+        std::cout << "                                         ▒▒▓▓▓▓██▒▒▓▓▒▒▒▒▒▒▒▒▓▓▓▓▒▒▓▓▓▓▒▒      ░░" << std::endl;
+        std::cout << "                                           ░░▓▓▓▓▓▓██▓▓▓▓▒▒▒▒▓▓▒▒▒▒▓▓▓▓▒▒▒▒▒▒" << std::endl;
+        std::cout << "                                           ░░▒▒▒▒▓▓▓▓██▓▓▓▓▓▓▓▓▒▒▒▒▓▓▓▓▓▓▒▒▒▒▒▒" << std::endl;
+        std::cout << "                                           ▒▒  ░░▒▒▒▒▒▒▓▓██▓▓▓▓▓▓▒▒▓▓▓▓▓▓▓▓▒▒▒▒░░" << std::endl;
+        std::cout << "                                         ░░      ▒▒░░░░░░▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒▒▒▒░░" << std::endl;
+        std::cout << "                                         ░░      ░░▒▒    ░░▓▓▒▒▒▒▒▒▒▒▓▓▓▓▓▓▒▒▒▒░░" << std::endl;
+        std::cout << "                                                   ░░░░  ░░▓▓░░  ░░░░░░▒▒░░░░░░" << std::endl;
+        std::cout << "                                                     ░░    ▓▓▓▓▒▒░░" << std::endl;
+        std::cout << "                                                         ░░      ░░░░▒▒▓▓" << std::endl;
+        std::cout << "                                                                             ░░" << std::endl;
 }
 void bug_manual() {
         std::cout << ui.screen_clear;
 
+        ui.dash();
         std::cout << ui.tx_cyan << "Verbiage Manual\n" << ui.bg_tx_reset << std::endl;
 
         std::cout << ui.tx_cyan << "Verbiage" << ui.bg_tx_reset << ", an issue tracking system for developers.\n" << std::endl;
@@ -263,13 +265,22 @@ void bug_manual() {
 
         std::cout << "How it works: " << ui.tx_magenta << "Reporter POV" << ui.bg_tx_reset << std::endl;
 
-        std::cout << "Upon welcome screen, select 1 to write a report, or 2 to see the list of bugs. \nUpon selecting 1, the user will be asked a series of questions. Answer accordingly. \nAfterwards, a confirmation message will be prompted whether to publish the report or disregard.\n" << std::endl;
+        std::cout << "Upon welcome screen, select 1 to write a report, or 2 to see the list of bugs. \nUpon selecting 1, the user will be asked a series of questions. Afterwards, a confirmation message will be prompted whether to publish the report or disregard.\n" << std::endl;
 
         std::cout << "How it works: " << ui.tx_blue << "Developer POV" << ui.bg_tx_reset << std::endl;
 
         std::cout << "The Developer POV is similar to the Reporter POV, but with elevated permissions.\nUpon selecting 3, the user will be prompted with a password login before being permitted system access.\n" << std::endl;
 
-        report.bug_display();
+        std::cout << "List of Reported Bugs Example:" << std::endl;
+        ui.dash();
+        std::printf("| %-3s | %-15s | %-12s | %-8s | %-51s |\n","ID", "Priority", "Platform", "Version", "Title");
+        ui.dash();
+        std::printf("| %-3s |", "1");
+        std::cout << ui.bg_white;
+        std::printf(" %-15s ", "Low");
+        std::cout << ui.bg_tx_reset;
+        std::printf("| %-12s | %-8s | %-51.50s |\n", "Windows", "v1.0a", "Bug Report Example");
+        ui.dash();
 
         std::cout << "\nSpecific operations may be done by the developer." << std::endl;
 
@@ -580,6 +591,7 @@ int main() {
     report.bug_add("Windows", "v0.3a", "Working as Intended Test", "TESTING WaI", "none", "WAI");
     report.bug_add("Android", "v0.3a", "Invalid user inputs crashes the program", "The program ends unexpectedly when a wrong input is entered.", "Open a part of the program then put a character when a number is asked.", "Pending Review");
 
+    roach();
     welcome_screen();
     main_menu();
 
