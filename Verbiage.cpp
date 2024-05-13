@@ -348,6 +348,8 @@ void bug_manage() {
 void bug_manage_login() {
     std::cout << ui.screen_clear;
 
+    ui.dash();
+
     std::cout << "To manage bugs, you must login.";
     std::cout << ui.tx_cyan << "\nEnter 0 to return to menu.\n\n" << ui.bg_tx_reset;
 
@@ -462,6 +464,8 @@ void bug_report_confirm(std::string &platform, std::string &version, std::string
 void bug_report_review(std::string &platform, std::string &version, std::string &title, std::string &description, std::string &steps) {
     std::cout << ui.screen_clear;
 
+    ui.dash();
+
     std::cout << "Are these information correct?" << std::endl;
 
     std::cout << ui.tx_cyan << "Platform: " << ui.bg_tx_reset << platform << std::endl;
@@ -489,6 +493,8 @@ void bug_report_review(std::string &platform, std::string &version, std::string 
 }
 void bug_report_write() {
     std::cout << ui.screen_clear;
+
+    ui.dash();
 
     std::cout << "1. What platform are you on?" << ui.tx_cyan << " (1. Android | 2. Windows | 3. iOS | 4. Mac)" << "\n-> " << ui.bg_tx_reset;
     int choice;
@@ -536,9 +542,11 @@ void bug_report_write() {
 void bug_report() {
     std::cout << ui.screen_clear;
 
-    std::cout << "You want to report a bug. Is that correct?\n" << ui.tx_green << "1. Yes (Proceed) |" << ui.tx_magenta << " 2. No (Back to Menu)" << ui.bg_tx_reset;
+    ui.dash();
 
-    std::cout << "Select an Iperation:\n-> ";
+    std::cout << "You want to report a bug. Is that correct?\n" << ui.tx_green << "1. Yes (Proceed) |" << ui.tx_magenta << " 2. No (Back to Menu)" << ui.bg_tx_reset << std::endl;
+
+    std::cout << "Select an Operation:\n-> ";
     int choice;
     std::cin >> choice;
 
@@ -555,7 +563,8 @@ void bug_report() {
     }
 }
 void main_menu() {
-    std::cout << ui.tx_blue << "\n1. Report a Bug" << ui.tx_green << " | 2. See Existing Bugs" << ui.tx_magenta << " | 3. Manage Bugs (Login as a Developer)" << ui.bg_tx_reset << " | 4. Read Manual" << " | 5. Exit" << std::endl;
+    ui.dash();
+    std::cout << ui.tx_blue << "1. Report a Bug" << ui.tx_green << " | 2. See Existing Bugs" << ui.tx_magenta << " | 3. Manage Bugs (Login as a Developer)" << ui.bg_tx_reset << " | 4. Read Manual" << " | 5. Exit" << std::endl;
 
     int choice = 0;
     std::cout << "Select an Operation:\n-> ";
