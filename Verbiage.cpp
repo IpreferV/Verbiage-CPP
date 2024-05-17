@@ -141,7 +141,7 @@ public:
 
             bug_status(pair.first);
             
-            std::printf("| %-12s | %-8s | %-51.50s |\n", pair.second.platform_get().c_str(), pair.second.version_get().c_str(), pair.second.title_get().c_str());
+            std::printf("| %-12s | %-8.8s | %-51.50s |\n", pair.second.platform_get().c_str(), pair.second.version_get().c_str(), pair.second.title_get().c_str());
         }
         ui.dash();
     }
@@ -149,6 +149,7 @@ public:
         std::cout << ui.screen_clear;
 
         ui.dash();
+
         std::cout << "ID: " << id << " | Title: " << ui.bg_white << bug.at(id).title_get() << ui.bg_tx_reset;
         std::cout << ui.tx_cyan <<"\nDescription: " << ui.bg_tx_reset << bug.at(id).description_get();
         std::cout << ui.tx_cyan << "\n\nSteps to Recreate: " << ui.bg_tx_reset << bug.at(id).steps_get() << std::endl;
